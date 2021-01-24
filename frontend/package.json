@@ -33,7 +33,6 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^11.0.4",
-    "jest": "^26.4.2"
+    "@testing-library/react": "^11.0.4"
   }
 }
