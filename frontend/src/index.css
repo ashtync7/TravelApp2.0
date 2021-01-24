@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
@@ -23,4 +23,685 @@ nav a {
   width: 33%;
   padding: 20px;
   margin: 5px;
+} */
+
+/* NAV BAR STYLES */
+.navBar{
+  z-index: 5;
+  background: rgba(255, 255, 255, 0);
+}
+.navBar ul{
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  margin-right: 2vw;
+  font-family: 'Montserrat', sans-serif;
+  align-items: center;
+  color: #724169;
+}
+.navBar li{
+  font-size: 2.5vh;
+}
+.navBar a {
+  text-decoration: none;
+  color: #724169;
+}
+.navBar a:hover{
+  color: #D2A0DD;
+}
+@media (max-width: 1148px){
+  .navBar{
+    visibility: hidden;
+  }
+}
+@media (min-width: 1149px) {
+  .menu-wrap{
+    visibility: hidden;
+  }
+  #middleLogo{
+    visibility: hidden;
+  }
+}
+#middleLogo{
+  height: 15vh;
+  width: auto;
+}
+#midVanDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: -18vh;
+}
+/* body{
+  width: 100%;
+} */
+
+/* HAMBURGER MENU STYLES */
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  padding: 1rem;
+  background: rgba(235, 229, 245, 0.646);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 70%;
+  height: 2px;
+  background: #724169;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  /* transition-duration: 100; */
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  /* background: #cfb9d4f5; */
+  background: rgba(235, 229, 245, 0.913);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #724169;
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+#menu2li {
+  text-decoration: none;
+  list-style-type: none;
+  color: #724169;
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+/* HOME PAGE STYLES */
+/* body{
+  background-image: url("./images2/ethicalTraveler.jpeg");
+  background-size: auto;
+  background-repeat: no-repeat;
+} */
+
+.homeTotal{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  background: url("./images2/ethicalTraveler.jpeg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 150px;
+  z-index: -1
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+
+.homeHeader{
+  text-align:center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: -5vh;
+}
+.homeHeader h2{
+  font-size: 6vh;
+  color: #724169;
+}
+.homeHeader h4{
+  font-size: 4vh;
+  color: #D2A0DD;
+}
+#homePagePic{
+  width: 100vw;
+  height: auto;
+}
+#logo {
+  height: 15vh;
+  width: auto;
+}
+
+#glowSlogan{
+  height: auto;
+  width: 70vw;
+  margin-top: -20px;
+}
+#homeSummary{
+  margin-top: -2px;
+  color: #FEF9FF;
+}
+
+/* form css starts here */
+#chickenwings {
+  margin-top: -15px;
+  display: flex;
+  justify-content: space-around;
+  /* font-size: 3vh; */
+  padding: 30px;
+  font-family: 'Montserrat', sans-serif;
+  /* background-color: #D2A0DD; */
+  /* background-color: #724169; */
+  /* background-color: rgb(241, 235, 247); */
+  background-color: white;
+  opacity: 100%;
+  align-items: center;
+}
+#cheeseburgers {
+  width: 250px;
+  height: 70px;
+  /* margin-left: 1vw; */
+  background-color: white;
+  /* box-shadow: 0 2px 2px 0; */
+  /* border-radius: 5px; */
+  border: grey 1px solid;
+  text-transform: uppercase;
+  font-size: 1.3vh;
+}
+
+
+#formMessage {
+  width: 250px;
+  height: 70px;
+  /* margin-left: 1vw; */
+  background-color: white;
+  /* box-shadow: 0 2px 2px 0; */
+  /* border-radius: 5px; */
+  text-transform: uppercase;
+  font-size: 1.3vh;
+  /* margin: 0 0 0 -.2px; */
+  border: grey 1px solid;
+}
+#formButton {
+  height: 75px;
+  width: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  /* border: 1px solid #724169; */
+  border: none;
+  /* color: black; */
+  color: white;
+  /* background-color: lightblue; */
+  /* background-color: white; */
+  background-color: #724169;
+  /* box-shadow: 0 3px 3px 0; */
+  /* border-radius: 5px; */
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: black;
+}
+input[type="text"] {
+  font-family: Montserrat;
+  font-size: 20px;
+}
+textarea[type="text"] {
+  font-family: Montserrat;
+  font-size: 20px;
+}
+#chickenwings label {
+  color: #724169;
+}
+#formStuff {
+  /* background-color: #724169; */
+  padding: 20px;
+  /* border: 1px black ; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.messageLabel {
+  display: flex;
+  align-items: center;
+}
+#formIntro {
+  font-size: 2.5vh;
+  text-align: center;
+  width: 500px;
+}
+@media (max-width: 1000px){
+  #chickenwings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #724169; */
+  }
+  .formDiv1{
+    margin-bottom: 10px;
+  }
+  .formDiv2{
+    margin-bottom: 10px;
+  }
+  .messageLabel{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  /* #formIntro{
+    width: 300px;
+  } */
+  #formStuff{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    align-self: center;
+  }
+}
+
+
+/* DESTINATIONS PAGE STYLES */
+body {
+  font-family: 'Overpass', sans-serif;
+}
+
+.section-header {
+  text-align: center;
+  /* margin: 60px auto 20px auto; */
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.section-header-underline {
+  border: 1px solid #222;
+  width: 3rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.video-gallery {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.video-gallery .gallery-item {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 580px;
+  max-height: 360px;
+  width: 48%;
+  background: #000;
+  cursor: pointer;
+}
+
+.video-gallery .gallery-item img {
+  position: relative;
+  display: block;
+  opacity: .45;
+  width: 105%;
+  height: 300px;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(-23px, 0, 0);
+  backface-visibility: hidden;
+}
+
+.video-gallery .gallery-item .gallery-item-caption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+
+.video-gallery .gallery-item .gallery-item-caption,
+.video-gallery .gallery-item .gallery-item-caption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+}
+
+.video-gallery .gallery-item h2 {
+  font-weight: 300;
+  overflow: hidden;
+  padding: 0.5em 0;
+}
+
+
+.video-gallery .gallery-item h2,
+.video-gallery .gallery-item p {
+  position: relative;
+  margin: 0;
+  /* z-index: 10; */
+}
+
+.video-gallery .gallery-item p {
+  letter-spacing: 1px;
+  font-size: 68%;
+
+  padding: 1em 0;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(10%, 0, 0);
+}
+
+.video-gallery .gallery-item:hover img {
+  opacity: .3;
+  transform: translate3d(0, 0, 0);
+
+}
+
+.video-gallery .gallery-item .gallery-item-caption {
+  text-align: left;
+}
+
+.video-gallery .gallery-item h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  height: 1px;
+  background: #fff;
+  
+  transition: transform 0.3s;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.video-gallery .gallery-item:hover h2::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.video-gallery .gallery-item:hover p {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media screen and (max-width: 50em) {
+  .video-gallery .gallery-item {
+    display: inline-block;
+    float: none;
+    /* margin: 10px auto; */
+    width: 100%;
+  }
+}
+
+
+
+/* CUSTOM VACATION PAGE STYLES */
+.theBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  /* margin-left: 20vw; */
+  /* border: #D2A0DD 1px solid; */
+  margin:1px 20vw 0 20vw;
+  padding: 5px;
+}
+.customImage{
+  width: 20vw;
+  height: auto;
+}
+.customAddBtn{
+  width: 10vw;
+  height: 7vw;
+  background-color: #724169;
+  color: white;
+  border: none;
+}
+.customAddBtn:hover{
+  border: #956eb1bb solid 5px;
+}
+
+
+/* RESOURCES PAGE STYLES */
+.gallery-item-caption a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+/* ABOUT US PAGE STYLES */
+.headshot1{
+  height: auto;
+  width: 35vw;
+  border-radius: 50%;
+  /* margin-left: 5vw; */
+}
+.headshot2{
+  height: auto;
+  width: 35vw;
+  border-radius: 50%;
+  /* position: absolute; */
+  right: 0;
+  /* margin-right: 5vw; */
+}
+.aboutSec1{
+  text-align: center;
+  /* margin: 60px auto 20px auto; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  /* text-transform: uppercase; */
+  color: #222;
+}
+.aboutSec1 h2{
+  text-transform: uppercase;
+}
+.aboutSec2{
+  display: flex;
+  justify-content: space-around;
+  text-align: right;
+  align-items: center;
+  margin-top: 100px;
+}
+.aboutSec3{
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  align-items: center;
+  margin-top: 10vw;
+}
+@media (max-width: 700px) {
+  .aboutSec2{
+    flex-direction: column;
+    
+  }
+  .aboutSec3{
+    flex-direction: column-reverse;
+  }
+  .ashDiv p {
+    font-size: 4vw;
+    width: 70vw;
+  }
+  .ashDiv {
+    margin-right: 15vw;
+    text-align: center;
+  }
+  .jadaDiv p {
+    font-size: 4vw;
+    width: 70vw;
+    margin-left: -10vw;
+    text-align: center;
+  }
+}
+
+.ashDiv{
+  /* margin-right: 5vw; */
+  font-size: 2.2vw;
+  width: 50vw;
+  font-family: 'Montserrat', sans-serif;
+}
+.jadaDiv{
+  /* margin-left: 5vw; */
+  font-size: 2.2vw;
+  width: 50vw;
+  font-family: 'Montserrat', sans-serif;
+}
+.ashDiv a{
+  color: black;
+  text-decoration: none;
+}
+.jadaDiv a{
+  color: black;
+  text-decoration: none;
+}
+.ashDiv a:hover{
+  color: #724169;
+}
+.jadaDiv a:hover{
+  color: #724169;
+
+}
+
+
+/* FOOTER STYLES */
+footer {
+  position: absolute;
+  right: 0;
+  bottom:0;
+  left:0;
+  text-align: center;
+  margin-top: 50px;
+}
+footer h1{
+  /* margin: 0 20px 10px 20px; */
+  font-size: 20px;
+  font-weight: 200;
+}
+footer h2{
+  /* margin: 0 20px 10px 20px; */
+  font-size: 20px;
+  font-weight: 200;
 }

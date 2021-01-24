@@ -1,0 +1,26 @@
+[
+    {
+        "name": "New York, New York",
+        "image": "https://www.infocusclinical.com/wp-content/uploads/2019/12/MG_1_1_New_York_City-1.jpg"
+    },
+    {
+        "name": "Los Angeles, California",
+        "image": "https://media.timeout.com/images/105718842/image.jpg"
+    },
+    {
+        "name": "Miami, Florida",
+        "image": "https://www.fortunebuilders.com/wp-content/uploads/2014/12/miami-real-estate-investing.jpg"
+    },
+    {
+        "name": "Seattle, Washington",
+        "image": "https://drivito2.imgix.drizly.com/5f93122b7685d985/86050bb2137e/wa-seattle.jpg?auto=format%2Ccompress&fm=jpeg&q=40&w=1800"
+    },
+    {
+        "name": "Chicago, Illinois",
+        "image": "https://republicanatheists.com/wp-content/uploads/2018/02/Chicago_illinois.jpg"
+    },
+    {
+        "name": "Honolulu, Hawaii",
+        "image": "https://a.netzero-usa.com/site/media/Honolulu-Hawaii.png"
+    }
+]
