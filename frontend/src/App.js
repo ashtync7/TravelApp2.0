@@ -1,5 +1,5 @@
 import React, { Component, Fragment, useState, useEffect } from "react";
-import { Switch, Route, NavLink, useHistory } from "react-router-dom";
+import { Switch, Route, NavLink, useHistory, Link } from "react-router-dom";
 import TheContext from './TheContext';
 import Home from './components/Home';
 import Destinations from './components/Destinations';
