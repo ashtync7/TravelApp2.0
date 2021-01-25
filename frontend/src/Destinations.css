@@ -1,0 +1,30 @@
+/* html {
+    background-color: white;
+}
+nav{
+    background-color: white;
+}
+.content{
+    background-color: white;
+}
+.section-header{
+    background-color: white;
+} */
+/* GRAY AND PURPLE GRADIENT */
+html{
+    background: rgb(193,193,193);
+background: radial-gradient(circle, rgba(193,193,193,1) 54%, rgba(173,155,199,0.6460959383753502) 100%);
+}
+nav{
+    background: rgb(193,193,193);
+background: radial-gradient(circle, rgba(193,193,193,1) 54%, rgba(173,155,199,0.6460959383753502) 100%);
+}
+/* WHITE AND GRAY GRADIENT */
+html{
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 54%, rgba(180, 172, 187, 0.561) 100%);
+}
+nav{
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 54%, rgba(180, 172, 187, 0.561) 100%);
+}
