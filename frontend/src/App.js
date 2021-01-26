@@ -17,7 +17,7 @@ const App = () => {
     <div>
       <nav className="navBar">
         <ul>
-          <Link to='/'><img id="logo" src="images/WTAlogoVan1.png"></img></Link>
+          <Link to='/'><img id="logo" src="./WTAlogoVan1.png"></img></Link>
           <Link to='/'><li>Home</li></Link>
           <Link to={`/Destinations`}><li>Destinations</li></Link>
           <Link to={`/CustomVacations`}><li>Custom Vacations</li></Link>
@@ -27,7 +27,7 @@ const App = () => {
       </nav>
       <div id="midVanDiv">
         {/* <Link to={`/`}> */}
-        <img src="images/WTAlogoVan1.png" alt="Our Van Logo" id="middleLogo" />
+        <img src="./WTAlogoVan1.png" alt="Our Van Logo" id="middleLogo" />
         {/* </Link> */}
       </div>
       <nav className="menu-wrap">
