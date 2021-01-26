@@ -62,7 +62,7 @@ function Destinations(props) {
                         <div class="gallery-item-caption">
                             <div>
                                 <h2>New York, New York</h2>
-                                <p>blah blah city that never sleeps</p>
+                                <p>Visit the city that never sleeps. See some of the most famous and historic sites of the Big Apple.</p>
                             </div>
                         </div>
                     </div>
