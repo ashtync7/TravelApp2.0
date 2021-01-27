@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Tzikas/IronPlate/issues"
   },
-  "homepage": "https://github.com/Tzikas/IronPlate#readme",
+  "homepage": "https://ashtync7.github.io/TravelApp2.0/",
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
