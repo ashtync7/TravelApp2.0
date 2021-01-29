@@ -1,10 +1,72 @@
-import React from 'react';
+import React, { useState } from 'react';
 import customs from '../customs.json';
 
 function CustomVacation(props) {
 
-    const addToCart = (customs) => {
-        let cart = { ...customs }
+    const [city, setCity] = useState()
+    const [copy, setCopy] = useState()
+    const [cart, setCart] = useState([])
+
+    const addCity = (eachcustom) => {
+        setCity(eachcustom)
+
+        // console.log(copyCity)
+
+        // setCopy(copyCity)
+        console.log(city)
+        let copyCity = { ...city }
+        cart.push(copyCity)
+        // console.log(cart)
+
+    }
+
+    const showCart = () => {
+        let html = [];
+        cart.map((city) => {
+            return (
+                <ul>
+                    <li>
+                        Name: <h3>{city.name}</h3>
+                    </li>
+
+                    <li>
+                        <img src={city.image} />
+                    </li>
+                </ul>
+            )
+        })
+
+        // let copyCity = { ...city }
+        // for (let eachcustom in copyCity) {
+        //     html.push(
+        //         <ul>
+        //             <li>
+        //                 Name: <h3>{eachcustom.name}</h3>
+        //             </li>
+
+        //             <li>
+        //                 <img src={copyCity[item].image} />
+        //             </li>
+        //         </ul>
+        //     )
+        //     return (
+        //         <div>
+        //             {html}
+        //         </div>
+        //     )
+    }
+    // cart.map((eachcustom) => {
+    //     return (
+    //         <div>
+    //             <h1>{eachcustom.name}</h1>
+    //             <h1>{eachcustom.iamge}</h1>
+    //         </div>
+    //     )
+    // })
+
+
+    const showCity = () => {
+        return customs.map
     }
 
     // new function customList = how we list out all customs from customs.json file. 
@@ -21,18 +83,21 @@ function CustomVacation(props) {
                         <p>{eachcustom.name}</p>
                     </section>
                     <section>
-                        <button onClick={(e) => props.addToCart()} className="customAddBtn">+</button>
+                        <button onClick={(e) => addCity(eachcustom)} className="customAddBtn">+</button>
                     </section>
-                </div>
+                </div >
             )
         })
     }
     return (
         <div>
+            <button onClick={(e) => console.log({ cart })}>Cart</button>
+            {showCart()}
             {customList()}
         </div>
 
     );
 }
+
 
 export default CustomVacation;
