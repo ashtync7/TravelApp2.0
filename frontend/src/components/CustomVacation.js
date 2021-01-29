@@ -36,37 +36,7 @@ function CustomVacation(props) {
             )
         })
 
-        // let copyCity = { ...city }
-        // for (let eachcustom in copyCity) {
-        //     html.push(
-        //         <ul>
-        //             <li>
-        //                 Name: <h3>{eachcustom.name}</h3>
-        //             </li>
 
-        //             <li>
-        //                 <img src={copyCity[item].image} />
-        //             </li>
-        //         </ul>
-        //     )
-        //     return (
-        //         <div>
-        //             {html}
-        //         </div>
-        //     )
-    }
-    // cart.map((eachcustom) => {
-    //     return (
-    //         <div>
-    //             <h1>{eachcustom.name}</h1>
-    //             <h1>{eachcustom.iamge}</h1>
-    //         </div>
-    //     )
-    // })
-
-
-    const showCity = () => {
-        return customs.map
     }
 
     // new function customList = how we list out all customs from customs.json file. 
