@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import customs from '../customs.json';
+import Cart from '../components/Cart';
 
 function CustomVacation(props) {
 
     const [city, setCity] = useState()
     const [copy, setCopy] = useState()
-    const [cart, setCart] = useState([])
+    // const [cart, setCart] = useState([])
+    let cart = []
+    // const cart = []
 
     const addCity = (eachcustom) => {
         setCity(eachcustom)
@@ -15,27 +18,32 @@ function CustomVacation(props) {
         // setCopy(copyCity)
         console.log(city)
         let copyCity = { ...city }
-        cart.push(copyCity)
+
+        // setCart(copyCity)
+
         // console.log(cart)
 
     }
 
+    // 
     const showCart = () => {
-        let html = [];
-        cart.map((city) => {
-            return (
-                <ul>
-                    <li>
-                        Name: <h3>{city.name}</h3>
-                    </li>
+        cart.push({ ...city })
+        // cart.shift()
+        console.log(cart)
+        //  cart.map((place) => {
+        //     return (
+        //         <ul>
+        //             <li>
+        //                 Name: <h3>{place.name}</h3>
+        //             </li>
 
-                    <li>
-                        <img src={city.image} />
-                    </li>
-                </ul>
-            )
-        })
+        //             <li>
 
+        //                 <img src={place.image} />
+        //             </li>
+        //         </ul>
+        //     )
+        // })
 
     }
 
@@ -62,8 +70,10 @@ function CustomVacation(props) {
     return (
         <div>
             <button onClick={(e) => console.log({ cart })}>Cart</button>
-            {showCart()}
+            {/* <button onClick={(e) => showCart()}>Cart</button> */}
+            {/* {showCart()} */}
             {customList()}
+            {/* <Cart cart={cart} {...props} /> */}
         </div>
 
     );

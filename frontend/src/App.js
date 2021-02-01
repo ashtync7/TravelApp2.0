@@ -6,6 +6,7 @@ import Destinations from './components/Destinations';
 import CustomVacations from './components/CustomVacation';
 import TravelResources from './components/TravelResources';
 import AboutUs from './components/About';
+import Cart from './components/Cart';
 import NotFound from "./components/404/NotFound.js";
 import actions from "./api/index";
 import { NotificationContainer, NotificationManager } from 'react-notifications';
@@ -23,6 +24,7 @@ const App = () => {
           <Link to={`/CustomVacations`}><li>Custom Vacations</li></Link>
           <Link to={`/TravelResources`}><li>Travel Resources</li></Link>
           <Link to={`/AboutUs`}><li>About Us</li></Link>
+          <Link to={'/Cart'}><li>Cart</li></Link>
         </ul>
       </nav>
       <div id="midVanDiv">
@@ -44,6 +46,7 @@ const App = () => {
                 <Link to={`/CustomVacations`} id="menu2li"><li>Custom Vacations</li></Link>
                 <Link to={`/TravelResources`} id="menu2li"><li>Travel Resources</li></Link>
                 <Link to={`/AboutUs`} id="menu2li" ><li>About Us</li></Link>
+                <Link to={'/Cart'} id="menu2li"><li>Cart</li></Link>
               </ul>
             </div>
           </div>
@@ -67,6 +70,7 @@ const App = () => {
         <Route exact path='/CustomVacations' render={() => <CustomVacations />} />
         <Route exact path='/TravelResources' render={() => <TravelResources />} />
         <Route exact path='/AboutUs' render={() => <AboutUs />} />
+        <Route exact path='/Cart' render={() => <Cart />} />
       </Switch>
 
 
