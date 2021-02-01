@@ -4,56 +4,48 @@ import Cart from '../components/Cart';
 
 function CustomVacation(props) {
 
-    const [city, setCity] = useState()
-    const [copy, setCopy] = useState()
-    // const [cart, setCart] = useState([])
-    let cart = []
+    const [cart, setCart] = useState([])
     // const cart = []
 
     const addCity = (eachcustom) => {
-        setCity(eachcustom)
-
-        // console.log(copyCity)
-
-        // setCopy(copyCity)
-        console.log(city)
-        let copyCity = { ...city }
-
-        // setCart(copyCity)
-
-        // console.log(cart)
-
+        // setting the cart as a copy of the previous items along with the new item added
+        setCart([...cart, eachcustom])
     }
 
     // 
-    const showCart = () => {
-        cart.push({ ...city })
+    const showCart = (eachcustom) => {
         // cart.shift()
         console.log(cart)
-        //  cart.map((place) => {
-        //     return (
-        //         <ul>
-        //             <li>
-        //                 Name: <h3>{place.name}</h3>
-        //             </li>
+        // return (
+        //     <li>
+        //         {eachcustom.name}
+        //     </li>
+        // )
+        cart.map((eachcustom) => {
+            return (
+                <ul>
+                    <li>
+                        Name: <h3>{eachcustom.name}</h3>
+                    </li>
 
-        //             <li>
+                    <li>
 
-        //                 <img src={place.image} />
-        //             </li>
-        //         </ul>
-        //     )
-        // })
+                        <img src={eachcustom.image} />
+                    </li>
+                </ul>
+            )
+        })
 
     }
 
     // new function customList = how we list out all customs from customs.json file. 
     function customList() {
         // map through all customs
-        return customs.map((eachcustom) => {
+        // adding unique IDs to each element that will be mapped through
+        return customs.map((eachcustom, idx) => {
             // return specific info (image, name)
             return (
-                <div className="theBox">
+                <div className="theBox" key={idx}>
                     <section>
                         <img src={eachcustom.image} className="customImage" />
                     </section>
@@ -61,7 +53,8 @@ function CustomVacation(props) {
                         <p>{eachcustom.name}</p>
                     </section>
                     <section>
-                        <button onClick={(e) => addCity(eachcustom)} className="customAddBtn">+</button>
+                        {/* passing in the item info as well as the unique ID */}
+                        <button onClick={(e) => addCity(eachcustom, idx)} className="customAddBtn">+</button>
                     </section>
                 </div >
             )
@@ -71,7 +64,7 @@ function CustomVacation(props) {
         <div>
             <button onClick={(e) => console.log({ cart })}>Cart</button>
             {/* <button onClick={(e) => showCart()}>Cart</button> */}
-            {/* {showCart()} */}
+            {showCart()}
             {customList()}
             {/* <Cart cart={cart} {...props} /> */}
         </div>
