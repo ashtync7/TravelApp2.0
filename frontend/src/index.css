@@ -241,9 +241,9 @@ nav a {
   height: 100vh;
 
   background: url("./images2/ethicalTraveler.jpeg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
+  /* -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; */
   background-size: cover;
   min-height: 100%;
   min-width: 100%;
@@ -253,7 +253,7 @@ nav a {
   top: 0;
   left: 0;
   padding-top: 150px;
-  z-index: -1
+  z-index: -1;
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
@@ -725,7 +725,8 @@ footer h2{
   text-align: center;
 }
 .cartReturn {
-  border: 2px solid #D2A0DD; 
+  /* border: 2px solid #D2A0DD;  */
+  background-color: #d2a0dd3f; 
   width: 20vw;
   display: flex;
   flex-direction: column;
