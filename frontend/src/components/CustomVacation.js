@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import customs from '../customs.json';
 import Cart from '../components/Cart';
+import 'bulma/css/bulma.css';
 
 function CustomVacation(props) {
 
@@ -12,31 +13,49 @@ function CustomVacation(props) {
         setCart([...cart, eachcustom])
     }
 
-    // 
-    const showCart = (eachcustom) => {
-        // cart.shift()
-        console.log(cart)
-        // return (
-        //     <li>
-        //         {eachcustom.name}
-        //     </li>
-        // )
-        cart.map((eachcustom) => {
-            return (
+
+    const showCart = () => {
+        let html = [];
+        let cartCopy = { ...cart }
+        for (let eachcustom in cartCopy) {
+            html.push(
                 <ul>
                     <li>
-                        Name: <h3>{eachcustom.name}</h3>
+                        <h3>{cartCopy[eachcustom].name}</h3>
                     </li>
-
                     <li>
-
-                        <img src={eachcustom.image} />
+                        <img src={cartCopy[eachcustom].image}></img>
                     </li>
                 </ul>
-            )
-        })
+            );
+        }
+        // cart.shift()
+        return (
+            <div>
+                {html}
+            </div>
+        )
+
+        // console.log(cart)
+
 
     }
+    // cart.map((eachcustom) => {
+    //     return (
+    //         <ul>
+    //             <li>
+    //                 Name: <h3>{eachcustom.name}</h3>
+    //             </li>
+
+    //             <li>
+
+    //                 <img src={eachcustom.image} />
+    //             </li>
+    //         </ul>
+    //     )
+    // })
+
+
 
     // new function customList = how we list out all customs from customs.json file. 
     function customList() {
