@@ -6,7 +6,6 @@ import Destinations from './components/Destinations';
 import CustomVacations from './components/CustomVacation';
 import TravelResources from './components/TravelResources';
 import AboutUs from './components/About';
-import Cart from './components/Cart';
 import NotFound from "./components/404/NotFound.js";
 import actions from "./api/index";
 import { NotificationContainer, NotificationManager } from 'react-notifications';
@@ -68,7 +67,6 @@ const App = () => {
         <Route exact path='/CustomVacations' render={() => <CustomVacations />} />
         <Route exact path='/TravelResources' render={() => <TravelResources />} />
         <Route exact path='/AboutUs' render={() => <AboutUs />} />
-        <Route exact path='/Cart' render={() => <Cart />} />
       </Switch>
 
 
