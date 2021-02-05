@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import customs from '../customs.json';
 import Cart from '../components/Cart';
-import 'bulma/css/bulma.css';
+// import 'bulma/css/bulma.css';
 
 function CustomVacation(props) {
 
