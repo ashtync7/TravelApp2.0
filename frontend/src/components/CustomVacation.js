@@ -23,7 +23,7 @@ function CustomVacation(props) {
         for (let eachcustom in cartCopy) {
             html.push(
                 <div className="cartDiv">
-                    <ul>
+                    <ul className="cartItems">
                         <li>
                             {/* Pushing the name and image of each added data piece/custom */}
                             {/* Take the cartCopy, pass the prop “eachcustom” to it, which is whichever city we add-- And then return the name of the city (.name) */}
@@ -41,7 +41,7 @@ function CustomVacation(props) {
         return (
             <div className="cartReturn">
                 {/* return a div which holds our array 'HTML' in which we pushed our cart to. now HTML is the rendered version of cart */}
-                <h2 className="cartTitle1" >Your Custom Vacation</h2>
+                <h2 className="cartTitle1" >YOUR CUSTOM VACATION</h2>
                 {html}
             </div>
         )
