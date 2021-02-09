@@ -712,16 +712,17 @@ footer h2{
 .cartTitle1{
   font-size: 20px;
   font-weight: 800;
-  text-align: center;
-  /* margin-top: 20px; */
-  /* margin-bottom: 10px; */
+  margin-top: 20px; 
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  padding-left: 25px;
 }
 .cartDiv {
   /* margin-top: 20px;
   margin-bottom: 20px; */
   text-align: center;
   display: flex;
-  align-content: center;
   align-items: center;
   justify-content: center;
 }
@@ -732,11 +733,11 @@ footer h2{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-self: center;
   margin-left: 40vw;
   margin-top: 20px;
   margin-bottom: 40px;
   padding: 10px;
+  padding-right: 40px;
 }
 
 .cartItems {
