@@ -6,12 +6,28 @@ import Destinations from './components/Destinations';
 import CustomVacations from './components/CustomVacation';
 import TravelResources from './components/TravelResources';
 import AboutUs from './components/About';
+import Cart from './components/Cart';
+import Customs from './customs.json';
 import NotFound from "./components/404/NotFound.js";
 import actions from "./api/index";
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 
-const App = () => {
+const PAGE_PRODUCTS = 'customs';
+const PAGE_CART = 'cart';
 
+const App = () => {
+  const [cart, setCart] = useState([]);
+  const [page, setPage] = useState(PAGE_PRODUCTS);
+
+  const navigateTo = (nextPage) => {
+    setPage(nextPage);
+  };
+
+  const getCartTotal = () => {
+    return cart.reduce(
+      (sum, { quantity }) => sum + quantity, 0
+    );
+  };
 
   return (
     <div>
@@ -74,6 +90,10 @@ const App = () => {
       <h1>© 2020 Wanderlust Travel Agency | Designed by Jada Woody and Ashtyn Czapansky</h1>
       <h2>123 Fake Address Rd. | Some Small Town, State51 11111 USA | <a href="tel:+0000000000" id="phoneCall">(000)000-0000</a></h2>
     </footer> */}
+
+      <button onClick={() => navigateTo(PAGE_CART)}>
+        Go to Cart ({getCartTotal()})
+</button>
 
     </div>
   )

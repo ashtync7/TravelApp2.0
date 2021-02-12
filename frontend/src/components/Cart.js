@@ -10,15 +10,8 @@ function Cart(props) {
         let html = [];
         cart.map((city) => {
             return (
-                <ul>
-                    <li>
-                        Name: <h3>{city.name}</h3>
-                    </li>
+                <h1>Cart</h1>
 
-                    <li>
-                        <img src={city.image} />
-                    </li>
-                </ul>
             )
         })
 
