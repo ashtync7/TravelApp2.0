@@ -95,6 +95,10 @@ const App = () => {
         Go to Cart ({getCartTotal()})
 </button>
 
+      <button onClick={() => navigateTo(PAGE_PRODUCTS)}>
+        View Products
+        </button>
+
     </div>
   )
 
