@@ -99,8 +99,16 @@ const App = () => {
         View Products
         </button>
 
+      {/* {page === PAGE_PRODUCTS && (
+        <Customs cart={cart} setCart={setCart} />
+      )}
+
+      {page === PAGE_CART && (
+        <Customs cart={cart} setCart={setCart} />
+      )} */}
+
     </div>
-  )
+  );
 
 }
 export default App;
