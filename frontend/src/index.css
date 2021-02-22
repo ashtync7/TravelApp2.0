@@ -306,6 +306,7 @@ nav a {
   background-color: white;
   opacity: 100%;
   align-items: center;
+  z-index: 1000;
 }
 
 #cheeseburgers {
