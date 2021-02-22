@@ -14,7 +14,9 @@ function Home(props) {
             </div>
 
             <div>
-                <p>Pizza pizza pizza pizza</p>
+                <form name="contact">
+                    <input name="name" type="submit" value="Send" class="sendButton" id="formButton"></input>
+                </form>
             </div>
 
             <div id="formStuff">
