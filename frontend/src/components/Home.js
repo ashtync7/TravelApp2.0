@@ -24,23 +24,23 @@ function Home(props) {
 
             <div id="formStuff">
                 {/* <div><p id="formIntro">Let's start planning your trip! Tell us about what kind of vacation you want to take!</p></div> */}
-                <div>
+                {/* <div>
                     <form enctype="text/plain" data-netlify="true" name="contact"
                         // action="mailto:jadawoody@gmail.com" 
                         method="POST" id="chickenwings">
                         {/* <div className="formDiv1"> */}
-                        <input type="text" id="cheeseburgers" name="name" className="input1" placeholder="First & Last Name" name="Name"></input>
-                        {/* </div> */}
-                        {/* <div className="formDiv2"> */}
-                        <input type="text" id="cheeseburgers" className="input2" placeholder="E-mail Address" name="Email Address"></input>
-                        {/* </div> */}
-                        {/* <div className="messageLabel"> */}
-                        <input type="text" id="formMessage" name="place" rows="3" placeholder="Where do you want to go?" name="Message"></input>
-                        {/* </div> */}
-                        <input type="submit" value="Send" class="sendButton" id="formButton">
+                {/* <input type="text" id="cheeseburgers" name="name" className="input1" placeholder="First & Last Name" name="Name"></input> */}
+                {/* </div> */}
+                {/* <div className="formDiv2"> */}
+                {/* <input type="text" id="cheeseburgers" className="input2" placeholder="E-mail Address" name="Email Address"></input> */}
+                {/* </div> */}
+                {/* <div className="messageLabel"> */}
+                {/* <input type="text" id="formMessage" name="place" rows="3" placeholder="Where do you want to go?" name="Message"></input> */}
+                {/* </div> */}
+                {/* <input type="submit" value="Send" class="sendButton" id="formButton">
                         </input>
-                    </form>
-                </div>
+                    </form> */}
+                {/* </div> */}
             </div>
         </div>
 
