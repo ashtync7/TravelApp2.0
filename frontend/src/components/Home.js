@@ -12,6 +12,11 @@ function Home(props) {
                 <h4 id="homeSummary">Travel - the only thing you buy that makes you richer.</h4>
 
             </div>
+
+            <div>
+                <p>Pizza pizza pizza pizza</p>
+            </div>
+
             <div id="formStuff">
                 {/* <div><p id="formIntro">Let's start planning your trip! Tell us about what kind of vacation you want to take!</p></div> */}
                 <div>
