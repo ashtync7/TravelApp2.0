@@ -306,7 +306,6 @@ nav a {
   background-color: white;
   opacity: 100%;
   align-items: center;
-  z-index: 7;
 }
 
 #cheeseburgers {
@@ -375,6 +374,7 @@ textarea[type="text"] {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  z-index: 7;
 }
 .messageLabel {
   display: flex;
