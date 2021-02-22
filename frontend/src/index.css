@@ -250,7 +250,7 @@ nav a {
   top: 0;
   left: 0;
   padding-top: 200px;
-  z-index: -1;
+  z-index: -1000;
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
