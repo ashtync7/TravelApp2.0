@@ -263,7 +263,7 @@ nav a {
 .homeHeader{
   text-align:center;
   font-family: 'Montserrat', sans-serif;
-  margin-top: -5vh;
+  /* margin-top: 1px; */
 }
 .homeHeader h2{
   font-size: 6vh;
