@@ -11,7 +11,7 @@ const session = require('express-session');
 const passport = require('./config/passport');
 
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/deploymentExample'
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/wanderlust'
 console.log('Connecting DB to ', MONGODB_URI)
 
 mongoose
@@ -65,7 +65,7 @@ app.use('/api', auth);
 app.get('*', (req, res, next) => {
   console.log('weird', req.headers.host, 'peach', req.url)
 
-  if(req.headers.host.includes('heroku')){ 
+  if (req.headers.host.includes('heroku')) {
     res.sendFile(path.join(__dirname, '../frontend/build/index.html'))
   } else {
     next()
