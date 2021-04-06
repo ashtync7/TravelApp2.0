@@ -16,6 +16,7 @@ import actions from "./api/index";
 import GoogleAuth from "./components/auth/GoogleAuth";
 import GoogleAuthLogin from "./components/auth/GoogleAuthLogin";
 import { NotificationContainer, NotificationManager } from 'react-notifications';
+import Home from "./components/home/Home";
 
 const PAGE_PRODUCTS = 'customs';
 const PAGE_CART = 'cart';
@@ -67,11 +68,11 @@ const App = () => {
               <NavLink to="/profile">Profile</NavLink>
             </Fragment>
           ) : (
-              <Fragment>
-                <NavLink to="/sign-up">Sign Up</NavLink>
-                <NavLink to="/log-in">Log In</NavLink>
-              </Fragment>
-            )}
+            <Fragment>
+              <NavLink to="/sign-up">Sign Up</NavLink>
+              <NavLink to="/log-in">Log In</NavLink>
+            </Fragment>
+          )}
         </nav>
 
         {!user && <GoogleAuth setUser={setUser} />}
